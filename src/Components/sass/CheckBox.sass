@@ -1,0 +1,20 @@
+@import '../../GlobalFiles/GlobalVars.sass'
+
+.ContainerCheckBox
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 23px
+    height: 23px
+    border: 2px solid $black
+    transition: .1s ease
+    &:hover
+        cursor: pointer
+    svg
+        fill: $white
+        height: 80%
+        width: 80%
+        transition: .1s ease
+    &.checked
+        svg
+            fill: $black

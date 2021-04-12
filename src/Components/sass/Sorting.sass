@@ -1,0 +1,48 @@
+@import '../../GlobalFiles/GlobalVars.sass'
+
+.ContainerSorting
+    display: flex
+    // border: 1px solid red
+    align-items: center
+    position: relative
+    &:hover
+        cursor: pointer
+    .option
+        display: flex
+        justify-content: center
+        align-items: center
+
+        svg
+            margin-left: 10px
+            height: 20px
+
+    .Description
+        display: flex
+        justify-content: center
+        align-items: center
+        padding-right: 15px
+        padding-left: 5px
+        color: $ben_gray4
+        svg
+            margin-right: 5px
+            height: 20px
+            fill: $ben_gray3
+    .Current
+    .Options
+        background-color: $white
+        position: absolute
+        top: 100%
+        right: 0
+        display: none
+        border: 1px solid $ben_gray3
+        max-height: 0
+        z-index: 99
+        &_item
+            padding: 5px
+            border-bottom: 1px solid $ben_gray3
+            &:hover
+                background-color: $gray-200
+                cursor: pointer
+        &.show
+            display: block
+            max-height: 200px

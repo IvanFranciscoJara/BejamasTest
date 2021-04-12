@@ -1,0 +1,74 @@
+@import '../../GlobalFiles/GlobalVars.sass'
+
+.ContainerFilters
+    // border: 1px solid red
+    position: fixed
+    top: -100%
+    left: 0px
+    width: 100%
+    height: calc(100vh)
+    z-index: 99
+    transition: .2s ease
+    &.show
+        top: 0px
+    &__dark_Background
+        height: 100px
+        background-color: $black
+        opacity: 20%
+    &__content
+        position: relative
+        padding: 30px
+        background-color: $white
+        overflow-y: auto
+        height: calc(100% - 100px)
+        padding-bottom: 100px
+        .close
+            position: absolute
+            right: 0px
+            top: 0px
+            height: 60px
+            width: 60px
+            display: flex
+            justify-content: center
+            align-items: center
+            &:hover
+                cursor: pointer
+                svg
+                    fill: $ben_gray3
+
+        .filter
+            &.lineBottom
+                padding-bottom: 10px
+                border-bottom: 1px solid $ben_gray3
+                margin-bottom: 30px
+
+            &_title
+                font-weight: bold
+                font-size: 22px
+                margin-bottom: 20px
+            &_options
+                .option
+                    display: flex
+                    padding: 20px 0
+                    p
+                        font-size: 22px
+                        padding-left: 23px
+    &__actions
+        position: absolute
+        // border: 1px solid purple
+        bottom: 0px
+        left: 0px
+        width: 100%
+        display: flex
+        justify-content: space-around
+        background-color: $white
+        padding: 30px 16px 16px 16px
+        border-top: 4px solid $ben_gray
+        button
+            width: 45%
+            padding: 10px 39px
+        @media screen and (max-width: 800px)
+            // position: fixed
+            // top: 0
+            // left: 0
+            // display: none

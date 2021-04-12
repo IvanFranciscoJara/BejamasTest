@@ -1,0 +1,371 @@
+@import  '../../GlobalFiles/GlobalVars.sass'
+
+.ContainerHome
+    display: flex
+    justify-content: center
+    padding: 0 50px
+    @media screen and (max-width: 800px)
+        padding: 0px
+    .allPage
+        max-width: 1400px
+        @media screen and (max-width: 800px)
+            max-width: auto
+            width: 100%
+        .header
+            position: sticky
+            top: 0
+            padding: 30px 0
+            display: flex
+            justify-content: space-between
+            align-items: center
+            // border: 1px solid red
+            border-bottom: 4px solid $ben_gray
+            padding-right: 20px
+            z-index: 9
+            background-color: $white
+            .car
+                position: relative
+                display: flex
+                align-items: center
+                svg
+                    height: 50px
+                .cant
+                    background-color: $black
+                    color: $white
+                    position: absolute
+                    top: 90%
+                    left: 90%
+                    width: 20px
+                    height: 20px
+                    display: flex
+                    justify-content: center
+                    align-items: center
+                &:hover
+                    cursor: pointer
+                    svg
+                        fill: $ben_gray4
+                    .cant
+                        background-color: $ben_gray4
+            .logo
+                display: flex
+                align-items: center
+                svg
+                    height: 30px
+            .shoppingCart
+                position: absolute
+                right: 0
+                top: 100%
+                border: 0px solid #ffffff00
+                width: 400px
+                background-color: $white
+                z-index: 99
+                max-height: 0px
+                overflow-y: auto
+                transition: .2s ease
+                @media screen and (max-width: 800px)
+                    width: 100%
+                &.show
+                    max-height: 500px
+                    border: 4px solid $ben_gray
+                &_content
+                    padding: 20px
+                    .item
+                        position: relative
+                        border-bottom: 2px solid $ben_gray
+                        padding: 15px
+                        display: flex
+                        align-items: center
+                        &_close
+                            position: absolute
+                            right: 0px
+                            top: 0px
+                            height: 40px
+                            width: 40px
+                            display: flex
+                            justify-content: center
+                            align-items: center
+                            &:hover
+                                cursor: pointer
+                                svg
+                                    fill: $ben_gray3
+                        &_description
+                            width: 60%
+                            h4
+                                font-size: 20px
+                                font-weight: bold
+                                padding-bottom: 10px
+                            p
+                                font-size: 29px
+                                color: $ben_gray2
+                        &_image
+                            width: 40%
+                            img
+                                width: 80%
+                &_action
+                    width: 100%
+                    display: flex
+                    justify-content: center
+                    padding: 0 20px 20px 20px
+                    button
+                        width: 100%
+
+            @media screen and (max-width: 800px)
+                padding: 20px
+                padding-right: 30px
+                .car
+                    svg
+                        height: 25px
+                .logo
+                    svg
+                        height: 20px
+        .featurePhoto
+            padding-bottom: 65px
+            border-bottom: 4px solid $ben_gray
+            @media screen and (max-width: 800px)
+                padding: 14px
+            &_title
+                display: flex
+                justify-content: space-between
+                align-items: center
+                margin: 20px 0
+                h1
+                    font-size: 31px
+                @media screen and (max-width: 800px)
+                    button
+                        display: none
+            &_image
+                position: relative
+                height: 553px
+                overflow: hidden
+                img
+                    width: 100%
+                    display: flex
+                    align-items: center
+                .dayPhoto
+                    position: absolute
+                    left: 0
+                    bottom: 0
+                    background-color: $white
+                    color: $black
+                    padding: 30px 55px
+                    font-size: 20px
+                    font-weight: bold
+                @media screen and (max-width: 800px)
+                    height: auto
+                    .dayPhoto
+                        padding: 20px 40px
+            &_button
+                button
+                    display: none
+                @media screen and (max-width: 800px)
+                    button
+                        margin-top: 30px
+                        width: 100%
+                        display: block
+            &_details
+                padding-top: 40px
+                display: flex
+                justify-content: center
+                @media screen and (max-width: 800px)
+                    flex-direction: column
+
+                &__description
+                    padding-right: 100px
+                    width: 60%
+                    .title
+                        font-size: 22px
+                        font-weight: bold
+                        color: $black
+                        margin-bottom: 9px
+                    .category
+                        font-size: 22px
+                        font-weight: bold
+                        color: $ben_gray2
+                        margin-bottom: 12px
+                    .description
+                        font-size: 18px
+                        line-height: 27px
+                        color: $ben_gray2
+                    @media screen and (max-width: 800px)
+                        width: 100%
+                        padding: 0
+                        .category
+                            display: none
+                        .title
+                            margin-bottom: 30px
+                &__related
+                    width: 40%
+                    // border: 1px solid green
+                    .title
+                        font-weight: bold
+                        text-align: right
+                        font-size: 22px
+                        padding-bottom: 27px
+                    .images
+                        display: flex
+                        justify-content: flex-end
+
+                        &__item
+                            width: 120px
+                            height: 150px
+                            margin-left: 30px
+                            // border: 1px solid red
+                            overflow: hidden
+                            img
+                                object-fit: cover
+                                height: 100%
+                                width: 100%
+                        div:nth-child(1)
+                            margin-left: 0px
+                    .details
+                        margin-top: 54px
+                        text-align: right
+                        h3
+                            font-size: 22px
+                            padding-bottom: 9px
+                        p
+                            font-size: 16px
+                            padding-bottom: 9px
+                    @media screen and (max-width: 800px)
+                        width: 100%
+                        margin-top: 30px
+                        .title
+                            text-align: left
+                        .details
+                            margin-top: 30px
+                            text-align: left
+        .ProductsList
+            // padding-top: 40px
+            display: flex
+            .filters
+                width: 20%
+                // border: 1px solid blue
+                padding-right: 30px
+                &__filter
+                    &.lineBottom
+                        padding-bottom: 40px
+                        border-bottom: 1px solid $ben_gray3
+                        margin-bottom: 40px
+
+                    &_title
+                        font-weight: bold
+                        font-size: 22px
+                        margin-bottom: 20px
+                    &_options
+                        .option
+                            display: flex
+                            padding: 20px 0
+                            p
+                                font-size: 22px
+                                padding-left: 23px
+                @media screen and (max-width: 800px)
+                    position: fixed
+                    top: 0
+                    left: 0
+                    display: none
+            .products
+                width: 80%
+                &_list
+                    display: flex
+                    justify-content: space-between
+                    flex-wrap: wrap
+                    padding-left: 30px
+                @media screen and (max-width: 800px)
+                    width: 100%
+                    padding: 10px
+                    &_list
+                        padding: 0
+                .product
+                    width: 30%
+                    &__image
+                        // border: 1px solid red
+                        position: relative
+                        height: 400px
+                        margin-bottom: 9px
+                        object-fit: scale-down
+                        display: flex
+                        justify-content: center
+                        overflow: hidden
+                        img
+                            height: 100%
+                        button
+                            position: absolute
+                            bottom: -60px
+                            left: 0px
+                            width: 100%
+                        &:hover
+                            button
+                                bottom: 0px
+                        .bestSeller
+                            position: absolute
+                            top: 0px
+                            left: 0px
+                            background: $white
+                            padding: 5px 15px
+                            font-size: 20px
+                    &__category
+                        font-size: 22px
+                        font-weight: bold
+                        color: $ben_gray2
+                        padding-bottom: 9px
+                    &__name
+                        font-size: 34px
+                        font-weight: bold
+                        padding-bottom: 9px
+                    &__price
+                        font-size: 29px
+                        color: $ben_gray2
+                        padding-bottom: 50px
+                    @media screen and (max-width: 800px)
+                        width: 100%
+                        &__image
+                            height: 550px
+                &_pagination
+                    display: flex
+                    justify-content: center
+                    align-items: center
+                    &:hover
+                        cursor: pointer
+                    .left,
+                    .right
+                        padding: 5px
+                        svg
+                            height: 18px
+                        &.hide
+                            display: none
+                        &.show
+                            display: block
+                    .left
+                        svg
+                            transform: rotate(90deg)
+                    .right
+                        svg
+                            transform: rotate(270deg)
+                    .page
+                        padding: 5px
+                        font-size: 29px
+                        font-weight:
+                        color: $ben_gray4
+                        &.current
+                            color: $black
+        .ProductsListHeader
+            padding: 68px 0
+            display: flex
+            justify-content: space-between
+            align-items: center
+            h4
+                font-size: 30px
+                font-weight: bold
+                span
+                    color: $ben_gray4
+                    font-weight: normal
+            .filters
+                display: none
+            @media screen and (max-width: 800px)
+                padding: 60px 10px 20px 10px
+                h4
+                    font-size: 20px
+                .Sorting
+                    display: none
+                .filters
+                    display: block
