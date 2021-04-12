@@ -5,10 +5,6 @@ import Sorting from '../Components/Sorting'
 import Filters from '../Components/Filters'
 
 import { IconBenjamas, IconShoppingCart, IconFilters, IconDown, IconClose } from '../GlobalFiles/Icons'
-import useFetch from '../GlobalFiles/useFetch'
-import { useDispatch } from 'react-redux'
-import { SaveQuestions } from '../Redux/QuestionsDuck'
-import { useHistory } from 'react-router-dom'
 import JsonData from './bejamas'
 import './sass/Home.sass'
 
